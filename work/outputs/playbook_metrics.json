@@ -1,0 +1,33 @@
+{
+  "total_pages_scored": 22006,
+  "reason_code_counts": {
+    "model_decline_risk": 6232,
+    "moderate_risk_monitor": 5908,
+    "ctr_below_position_expectation": 5832,
+    "healthy_no_action": 4014,
+    "stale_high_risk": 20
+  },
+  "action_counts": {
+    "review_content": 6232,
+    "monitor": 5908,
+    "review_metadata": 5832,
+    "no_action": 4014,
+    "refresh_content": 20
+  },
+  "baseline_precision_at_50": 0.82,
+  "model_precision_at_50_naive_split": 0.86,
+  "model_precision_at_50_grouped_split": 0.88,
+  "features_used": [
+    "avg_position",
+    "ctr",
+    "impressions_90d",
+    "sessions_90d",
+    "word_count",
+    "content_age_days",
+    "days_since_last_update",
+    "search_volume",
+    "competition"
+  ],
+  "validation_design": "client-grouped split (GroupShuffleSplit)",
+  "label_definition": "trend_direction == 'down' (same-window proxy, not future outcome)"
+}
